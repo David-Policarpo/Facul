@@ -4,12 +4,12 @@ int main(){
     char estado1, estado2; // estado1 = Primeira Carta / estado2 = Segunda Carta
     char cod1[5], cod2[5]; // Código da Carta 1 / Código da Carta 2 
     char cidade1[30], cidade2[30]; // Nome da Cidade 1 / Nome da Cidade 2
-    int populacao1, populacao2; // População da Cidade 1 / População da Cidade 2
+    unsigned long int populacao1, populacao2; // População da Cidade 1 / População da Cidade 2
     int turistico1, turistico2; // Número de pontos Turísticos da cidade 1 / Número de pontos Turísticos da cidade 2
-    float area1, area2; // Área em km² cidade 1 / Área em km² cidade 2
-    float pib1, pib2; // PIB (Produto Interno Bruto) cidade 1 / PIB (Produto Interno Bruto) cidade 2
-    float densidade1, densidade2; // Densidade Populacional das cidades
-    float ppc1, ppc2; //PIB per capta das cidades
+    double area1, area2; // Área em km² cidade 1 / Área em km² cidade 2
+    double pib1, pib2; // PIB (Produto Interno Bruto) cidade 1 / PIB (Produto Interno Bruto) cidade 2
+    double densidade1, densidade2; // Densidade Populacional das cidades
+    double ppc1, ppc2; //PIB per capta das cidades
 
    
     // Iremos fazer uma carta de cada vez.
@@ -25,13 +25,13 @@ int main(){
     scanf(" %[^\n]", cidade1);   // Pesquisando um pouco descobri que usando esse especificador dá pra usar nomes compostos para as cidades com o Scanf.
 
     printf("Digite o número de habitantes da cidade (EX: 12325000): "); // Vou melhorar colocando a pontuação certinha de mil, milhão e etc...
-    scanf("%d", &populacao1);
+    scanf("%lu", &populacao1);
 
     printf("Digite a Área da cidade em quilômetros quadrados (EX: 1521.11): "); // Adicionar KM² no terminal de saída.
-    scanf("%f", &area1);
+    scanf("%lf", &area1);
 
     printf("Digite o PIB (EX: 699.28): ");
-    scanf("%f", &pib1);
+    scanf("%lf", &pib1);
 
     printf("Digite o número de pontos turísticos (EX: 50): ");
     scanf("%d", &turistico1);
@@ -49,13 +49,13 @@ int main(){
         scanf(" %[^\n]", cidade2);   // Pesquisando um pouco descobri que usando esse especificador dá pra usar nomes compostos para as cidades com o Scanf.
 
         printf("Digite o número de habitantes da cidade (EX: 6748000): "); 
-        scanf("%d", &populacao2);
+        scanf("%lu", &populacao2);
 
         printf("Digite a Área da cidade em quilômetros quadrados (EX: 1200.25): "); // Adicionar KM² no terminal de saída.
-        scanf("%f", &area2);
+        scanf("%lf", &area2);
 
         printf("Digite o PIB (EX: 300.50): ");
-        scanf("%f", &pib2);
+        scanf("%lf", &pib2);
 
         printf("Digite o número de pontos turísticos (EX: 30): ");
         scanf("%d", &turistico2);
@@ -78,7 +78,7 @@ int main(){
                 printf("Estado: %c\n", estado1);
                 printf("Código: %s\n", cod1);  
                 printf("Nome da Cidade: %s\n", cidade1);
-                printf("População: %d\n", populacao1);
+                printf("População: %lu\n", populacao1);
                 printf("Área: %.2f KM²\n", area1);
                 printf("PIB: %.2f Bilhões\n", pib1 / 1000000000);
                 printf("Número de Pontos Turísticos: %d\n", turistico1);
@@ -91,7 +91,7 @@ int main(){
                     printf("Estado: %c\n", estado2);
                     printf("Código: %s\n", cod2); 
                     printf("Nome da Cidade: %s\n", cidade2);
-                    printf("População: %d\n", populacao2);
+                    printf("População: %lu\n", populacao2);
                     printf("Área: %.2f KM²\n", area2);
                     printf("PIB: %.2f Bilhões\n", pib2 / 1000000000);
                     printf("Número de Pontos Turísticos: %d\n", turistico2);
