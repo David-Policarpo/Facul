@@ -1,14 +1,15 @@
 #include <stdio.h>
 int main(){
-    int idade;
+    int idade1, idade2;
 
-    idade = 15;
+    idade1 = 15;
+    idade2 = 32;
     
-    if(idade >= 18){
+    if(idade1 != idade2){
 
-    printf("Você é maior de idade\n");
-    printf("Dentro if\n");
+    printf("As idades são diferentes.\n");
+   
     }
     
-    printf("Fora If\n");
+    
 }
