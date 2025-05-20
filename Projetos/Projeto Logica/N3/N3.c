@@ -1,13 +1,20 @@
 #include <stdio.h>
 int main(){
-    int idade = 20;
-    float altura = 1.69;
-   
-    if (idade >= 18 && altura >= 1.70) 
-    { printf("Ele pode entrar no brinquedo.\n");
-       }else{
-        printf("Ele não pode entrar no brinquedo. \n");
-       }
+    int idade;
+       
+
+    printf("Digite a sua idade:\n"); 
+    scanf("%d", &idade);
+
+    if (idade < 12){
+        printf("Você é uma criança!\n");
+    }else if (idade >= 12 && idade < 18){
+        printf ("Você é um adolescente!\n");
+    }else if (idade >= 18 && idade < 60){
+        printf("Você é um adulto!\n");
+    }else {
+        printf ("Ta velho hein filho!\n");
+    }
     
 
 }
