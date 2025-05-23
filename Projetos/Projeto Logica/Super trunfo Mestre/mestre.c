@@ -104,7 +104,7 @@ int main() {
         return 1;
     }
 
-    // Obter valores dos atributos escolhidos - manualmente, sem macro
+    // Obter valores dos atributos escolhidos 
     switch (atributo1) {
         case 1: valor1_carta1 = populacao1; valor1_carta2 = populacao2; break;
         case 2: valor1_carta1 = area1; valor1_carta2 = area2; break;
