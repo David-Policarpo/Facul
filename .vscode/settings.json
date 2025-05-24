@@ -1,6 +1,7 @@
 {
     "C_Cpp.errorSquiggles": "disabled",
     "files.associations": {
-        "Mestre.C": "cpp"
+        "Mestre.C": "cpp",
+        "N1.C": "cpp"
     }
 }
