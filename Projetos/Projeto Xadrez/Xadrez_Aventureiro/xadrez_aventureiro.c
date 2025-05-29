@@ -27,7 +27,27 @@ int main(){
     } while (rainha <= 8);
 
 
-        
+    printf("\nMovimento do Cavalo!\n"); // Movimentar 2 casas para Baixo e uma a Esquerda com o Cavalo.
+    for (; cavalo < 3; cavalo++) 
+    {
+        printf("%d Baixo\n", cavalo);
+
+       while (cavalo == 2 && cavalo2 == 3) // Tive que mudar o cavalo2 para 3 para ficar com a numeração na ordem certa.
+       {
+            printf("%d Esquerda\n", cavalo2);
+            cavalo2++; // Para o while não rodar novamente
+        }
+    }
+    
+            
+            
+    
+
+    
+    
+
+   
+    
 
 
 return 0;
