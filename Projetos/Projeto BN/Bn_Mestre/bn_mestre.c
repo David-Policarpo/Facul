@@ -5,47 +5,48 @@ int main(){
 
     char linha[10] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'};
     int tabuleiro [LINHAS][COLUNAS] = {0}; // Iniciado o tabuleiro com todos os valores como 0
-    int cone[3][3],cruz [3][3], octaedro[3][3];
+    int cone[5][5],cruz [5][5], octaedro[5][5]; // Os três poderes com matriz 5x5 para ficar mais simétrico.
 
     //Espaço para pensar nos poderes.
-    //cruz
-    for (int i = 0; i < 3; i++)
+
+    //Cruz
+    for (int i = 0; i < 5; i++)
     {
-        for (int j = 0; j < 3; j++)
+        for (int j = 0; j < 5; j++)
         { 
             cruz[i][j] = (i == 2 || j == 2) ? 1 : 0;
         }
         
     }
 
-    // cone
-    for (int i = 0; i < 3; i++)
+    // Cone
+    for (int i = 0; i < 5; i++)
     {
-        for (int j = 0; j < 3; j++)
+        for (int j = 0; j < 5; j++)
         {
             cone[i][j] = (i >= j - 2 && i >= 2 - j);
         }
         
     }
 
-    //octaedro
-    for (int i = 0; i < 3; i++) 
+    // Octaedro
+    for (int i = 0; i < 5; i++) 
     {
-        for (int j = 0; j < 3; j++) {
+        for (int j = 0; j < 5; j++) {
         int inveri = (i - 2 < 0) ? -(i - 2) : (i - 2);
         int inverj = (j - 2 < 0) ? -(j - 2) : (j - 2);
         octaedro[i][j] = (inveri + inverj <= 2) ? 1 : 0;
     }
     }
     
-    int origemL_cone = 2, origemC_cone = 2;
-    int origemL_cruz = 3, origemC_cruz = 7;
-    int origemL_octa = 7, origemC_octa = 4;
+    int origemL_cone = 2, origemC_cone = 2; // Testando as posições para melhor se encaixar no tabuleiro 10x10
+    int origemL_cruz = 4, origemC_cruz = 6; // Colocando a cruz encostada do lado direito
+    int origemL_octa = 7, origemC_octa = 2; // Tive que colocar embaixo do Cone porque não dava em outro lugar
 
-    // aplicar cone
-    for (int i = 0; i < 3; i++) 
+    // Cone == Número 1
+    for (int i = 0; i < 5; i++) 
     {
-    for (int j = 0; j < 3; j++) 
+    for (int j = 0; j < 5; j++) 
     {
         if (cone[i][j] == 1) 
         {
@@ -59,15 +60,15 @@ int main(){
         }
     }
 
-    // aplicar cruz
-    for (int i = 0; i < 3; i++) 
+    // Cruz == Número 2
+    for (int i = 0; i < 5; i++) 
     {
-    for (int j = 0; j < 3; j++) 
+    for (int j = 0; j < 5; j++) 
     {
         if (cruz[i][j] == 1) 
         {
-            int lin = origemL_cruz + (i - 2);
-            int col = origemC_cruz + (j - 2);
+            int lin = origemL_cruz + (i - 1);
+            int col = origemC_cruz + (j - 1);
             if (lin >= 0 && lin < LINHAS && col >= 0 && col < COLUNAS) 
             {
                 tabuleiro[lin][col] = 2;
@@ -76,16 +77,16 @@ int main(){
         }
     }
 
-    // aplicar octaedro
-    for (int i = 0; i < 3; i++) 
+    //  Octaedro == Numero 3
+    for (int i = 0; i < 5; i++) 
     {
-    for (int j = 0; j < 3; j++) 
+    for (int j = 0; j < 5; j++) 
     {
         if (octaedro[i][j] == 1) 
         {
             int lin = origemL_octa + (i - 2);
             int col = origemC_octa + (j - 2);
-            if (lin >= 0 && lin < LINHAS && col >= 0 && col < COLUNAS) 
+            if (lin >= 0 && lin < LINHAS && col >= 0 && col < COLUNAS)  // Pedi ajuda aos universitários.
             {
                 tabuleiro[lin][col] = 3;
                 }
