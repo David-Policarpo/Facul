@@ -43,7 +43,7 @@ int main(){
     int origemL_cruz = 4, origemC_cruz = 6; // Colocando a cruz encostada do lado direito
     int origemL_octa = 7, origemC_octa = 2; // Tive que colocar embaixo do Cone porque não dava em outro lugar
 
-    // Cone == Número 1
+    // Cone == Número 5
     for (int i = 0; i < 5; i++) 
     {
     for (int j = 0; j < 5; j++) 
@@ -54,13 +54,13 @@ int main(){
             int col = origemC_cone + (j - 2);
             if (lin >= 0 && lin < LINHAS && col >= 0 && col < COLUNAS) 
             {
-                tabuleiro[lin][col] = 1;
+                tabuleiro[lin][col] = 5;
                 }
             }
         }
     }
 
-    // Cruz == Número 2
+    // Cruz == Número 6
     for (int i = 0; i < 5; i++) 
     {
     for (int j = 0; j < 5; j++) 
@@ -71,13 +71,13 @@ int main(){
             int col = origemC_cruz + (j - 1);
             if (lin >= 0 && lin < LINHAS && col >= 0 && col < COLUNAS) 
             {
-                tabuleiro[lin][col] = 2;
+                tabuleiro[lin][col] = 6;
                 }
             }
         }
     }
 
-    //  Octaedro == Numero 3
+    //  Octaedro == Numero 7
     for (int i = 0; i < 5; i++) 
     {
     for (int j = 0; j < 5; j++) 
@@ -88,7 +88,7 @@ int main(){
             int col = origemC_octa + (j - 2);
             if (lin >= 0 && lin < LINHAS && col >= 0 && col < COLUNAS)  // Pedi ajuda aos universitários.
             {
-                tabuleiro[lin][col] = 3;
+                tabuleiro[lin][col] = 7;
                 }
             }
         }
