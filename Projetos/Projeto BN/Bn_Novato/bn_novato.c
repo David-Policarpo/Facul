@@ -35,12 +35,12 @@ int main(){
 
     // Agora vem a parte complicada, impressão do tabuleiro.
     
-        for (int l = 0; l < 10; l++)
+        for (int l = 0; l < 10; l++) // l == linhas
         {
         
             printf("%c", linha[l]);
 
-        for (int c = 0; c < 10; c++) 
+        for (int c = 0; c < 10; c++) // c == colunas
         {
 
         printf(" %d", tabuleiro[l][c]);
@@ -50,5 +50,9 @@ int main(){
    
         }
 
+
+        printf("Teste %d", tabuleiro[2][4]);
     return 0;
 }
+ //Coluna 5 = indice 6
+ //Linha C = indice 2
