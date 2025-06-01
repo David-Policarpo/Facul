@@ -57,7 +57,7 @@ int main(){
     }
 
     // Navio Diagonal 1
-    int  linhaD = 9; // Imprimir na ultima linha J
+    int linhaD = 9; // Imprimir na ultima linha J
     int colunaD = 9; // Imprimir na ultima coluna 10
     if (linhaD - 2 >= 0 && colunaD - 2 >= 0) {
         sobreposicao = 0;
@@ -79,7 +79,7 @@ int main(){
     }
 
     // Navio Diagonal 2
-    int  linhaD2 = 0; // Imprimir na primeira linha A
+    int linhaD2 = 0; // Imprimir na primeira linha A
     int colunaD2 = 2; // imprimir na primeira Coluna 3
     if (linhaD2 + 2 < LINHAS && colunaD2 - 2 >= 0) {
         sobreposicao = 0;
